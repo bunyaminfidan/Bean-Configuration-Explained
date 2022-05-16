@@ -10,7 +10,6 @@ import com.example.test.service.VehicleService;
 public class TestController {
 
 	@Autowired
-	@Qualifier("carVehicleManagerConfiguration")
 	VehicleService vehicleService;
 
 	public void testVehicle() {
