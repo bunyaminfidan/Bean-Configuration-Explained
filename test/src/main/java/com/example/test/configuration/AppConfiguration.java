@@ -13,7 +13,6 @@ public class AppConfiguration {
 
 	
 	@Bean
-	@Primary
 	public VehicleService carVehicleServiceConfiguration() {
 		return new  CarVehicleManager();
 	}
