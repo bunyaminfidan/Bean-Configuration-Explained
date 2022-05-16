@@ -1,5 +1,6 @@
 package com.example.test.configuration;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -13,13 +14,14 @@ public class AppConfiguration {
 
 	
 	@Bean
-	public VehicleService carVehicleServiceConfiguration() {
+	@Qualifier("carVehicleManagerConfiguration")
+	public VehicleService carVehicleManagerConfiguration() {
 		return new  CarVehicleManager();
 	}
 	
 	@Bean
-
-	public VehicleService planeVehicleServiceConfiguration() {
+	@Qualifier("planeVehicleManagerConfiguration")
+	public VehicleService planeVehicleManagerConfiguration() {
 		return new  PlaneVehicleManager();
 	}
 }
